@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sams sandwich online order</title>
+<link href="Sams_sandwich_acordin.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h2>Sams sandwich shop</h2>
+
+<button class="accordion">Step 1 - select your bread size</button>
+<div class="panel">
+  <label><input class="addCheck" type="radio" name="bread_length" data-price="6.99" value="6inch">6 Inch</label>
+	<label><input class="addCheck" type="radio" name="bread_length" data-price="12.50" value="12inch">12 Inch</label>
+</div>
+
+<button class="accordion">Step 2 - select your bread type</button>
+<div class="panel">
+  <label><input class="addCheck" type="radio" name="bread_type" data-price="3" value="White">White</label>
+	<label><input class="addCheck" type="radio" name="bread_type" data-price="3" value="Wholegrain">WholeGrain</label>
+	<label><input class="addCheck" type="radio" name="bread_type" data-price="3.99" value="Italian">Italian</label>
+	<label><input class="addCheck" type="radio" name="bread_type" data-price="5" value="Rye">Rye</label>
+	<label><input class="addCheck" type="radio" name="bread_type" data-price="5.50" value="Wrap">Wrap</label>
+</div>
+
+<button class="accordion">Step 3 - select your chesse type</button>
+<div class="panel">
+  <label><input class="addCheck" type="radio" name="cheese" data-price="3" value="Swiss">Swiss</label>
+	<label><input class="addCheck" type="radio" name="cheese" data-price="3.50" value="Cheddar">Cheddar</label>
+	<label><input class="addCheck" type="radio" name="cheese" data-price="1" value="Feta">Feta</label>
+</div>
+	
+<button class="accordion">Step 4 - select your chesse type</button>
+<div class="panel">
+  <label><input class="addCheck" type="radio" name="meat" data-price="3.50" value="Ham">Ham</label>
+	<label><input class="addCheck" type="radio" name="meat" data-price="3" value="Tuna">Tuna</label>
+	<label><input class="addCheck" type="radio" name="meat" data-price="4.50" value="Turkey">Turkey</label>
+	<label><input class="addCheck" type="radio" name="meat" data-price="3" value="Salami">Salami</label>
+	<label><input class="addCheck" type="radio" name="meat" data-price="5" value="Meatball">Meatball</label>
+	<label><input class="addCheck" type="radio" name="meat" data-price="4" value="Chicken">Chicken</label>
+</div>
+
+<button class="accordion">Step 5 - select your Salads</button>
+<div class="panel">
+<label><input class="addCheck" type="checkbox" name="salad" value="Lettuce">Lettuce</label>
+	<p><label><input class="addCheck" type="checkbox" name="salad" value="Tomatoes">Tomatoes</label>
+	<label><input class="addCheck" type="checkbox" name="salad" value="Carrot">Carrot</label>
+	<label><input class="addCheck" type="checkbox" name="salad" value="Cucumber">Cucumber</label>
+</div>
+	<h2>Personal Details</h2>
+	<label>Your name:</label><input type="text" id="name" placeholder="Please type your name" pattern="[a-zA-Z]{2,39}"><br>
+	<label>Your cellphone number: </label><input id="cellphone" type="tel" placeholder="Please enter your phone number" pattern="02[0-9]\d{6,8}"><br>
+	<h2>Order Summary</h2>
+	<div id="radioResults"></div>
+
+<input type="button" value="Submit" id="submit_button" class="submitButton"><br><br>
+	<div id=confirmOverlay>
+	<p>your order has been confiurmed</p>
+	<a href="javascript:void(0)" onClick="document.getElementById('confirmOverlay').style.height='0'">&times;</a>
+</div>
+<!--	this is the Eturnal link to my  link to my -->
+	<script src="test_2.js" type="module"></script>
+	<script src="sams_sandwich_acordin.js" type="module"></script>
+</body>
+</html>

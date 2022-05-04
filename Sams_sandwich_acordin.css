@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300&family=Patrick+Hand&family=Radio+Canada:wght@300&display=swap');
+@charset "UTF-8";
+/* CSS Document */
+/*this is the code that makes the acorrdins open and code*/
+.accordion {
+  background-color:chartreuse;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;z
+	margin: 2px;
+  width: 95%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  }
+.accordion:hover{
+	background-color:antiquewhite; 
+
+}
+
+.active, .accordion:hover {
+  background-color:antiquewhite; 
+
+}
+
+.panel {
+  padding: 18px;
+	padding-top: 10px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.order_summary{
+	border:dotted #ffc600;
+	padding:10px;
+	margin: 20px;
+}
+/* This sets the page to semi responsive with an imported font */
+body{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	width:70%;
+	margin:auto;
+	font-family: 'Radio Canada', sans-serif;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	padding:50px;
+	overflow-x: hidden;
+}
+h2{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"
+}
+/*Ths style for the submit button */
+input[type=button] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+/*This makes the name and cellphone input fields larger */
+input[type=text],input[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#confirmOverlay {
+    /* style on confirm overlay */
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFCB0A;
+    opacity: 0.95;
+    transition: 0.2s;
+    width: 100vw;
+    height: 0;
+    /* height adjusted to expand overlay */
+}
+
+#confirmOverlay p {
+    /* style on text portion of confirm overlay */
+    line-height: 100vh;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 5vw;
+    opacity: 1.0;
+    color: #ffffff;
+}
+
+#confirmOverlay a {
+    /* style on cross to close confirm overlay */
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    font-size: 90px;
+}
+
+#confirmOverlay a:hover {
+    color: #cccccc;
+}
+
+
+
+/*The following code makes the radio/checkboxes larger and easier to use */
+.addCheck {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.addCheck:hover {
+  background: #9faab7;
+}
+.addCheck:checked {
+  background: #40e0d0;
+}
+.addCheck:checked::before {
+  width: 40px;
+  height: 40px;
+  display:flex;
+  content: '\f00c';
+  font-size: 25px;
+  font-weight:bold;
+  position: absolute;
+  align-items:center;
+  justify-content:center;
+  font-family:'Font Awesome 5 Free';
+}
+.addCheck:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.addCheck.radio {
+  border-radius: 50%;
+}
+.addCheck.radio::after {
+  border-radius: 50%;
+}
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 500) {
+	body{
+		width:100%;
+		padding:10px;
+	}
+	label{
+		display: block;
+		line-height:10px;	
+	}
+	input[type=button], input[type=text], input[type=tel]{
+	}
+}
